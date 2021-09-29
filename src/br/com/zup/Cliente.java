@@ -19,4 +19,12 @@ public class Cliente extends Pessoa{
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append(super.toString());
+        retorno.append("\nNúmero de Telefone do Cliente: " + telefone);
+        return retorno.toString();
+    }
 }
