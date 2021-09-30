@@ -19,13 +19,15 @@ public class Venda {
         this.tipovenda = tipovenda;
     }
     //Métodos
+    //Acréscimo de 10% na compra a prazo
     public double venderAPrazo (){
         double novoValor = livro.getPrecoLivro() * 1.1;
         livro.setPrecoLivro(novoValor);
         return novoValor;
     }
+    //Desconto de 5% na compra a vista
     public double venderAVista(){
-        double novoValor = livro.getPrecoLivro();
+        double novoValor = livro.getPrecoLivro() * 0.95;
         livro.setPrecoLivro(novoValor);
         return novoValor;
     }
