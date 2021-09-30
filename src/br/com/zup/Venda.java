@@ -18,6 +18,12 @@ public class Venda {
     public void setTipovenda(int tipovenda) {
         this.tipovenda = tipovenda;
     }
+    //Métodos
+    public double venderAPrazo (){
+        double novoValor = livro.getPrecoLivro() * 1.1;
+        livro.setPrecoLivro(novoValor);
+        return novoValor;
+    }
 
 
 }
