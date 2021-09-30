@@ -17,8 +17,8 @@ public class Sistema {
         System.out.println("Digite [3] para verificar um livro no estoque.");
         System.out.println("Digite [4] para sair do sistema.");
     }
+
     public static Livro cadastrarLivros(){
-        //codigoISBN , nomeLivro, autor, editora, precoLivro
         System.out.println("=================================================================");
         String codigoISBN = capturarDados("Digite o Código do livro(ISBN): ").nextLine();
         String nomeDoLivro = capturarDados("Digite o Nome do livro: ").nextLine();
@@ -33,5 +33,13 @@ public class Sistema {
         return livrocadastrado;
     }
 
+    public static Cliente cadastrarCliente(){
+        String nome = capturarDados("Digite o nome do cliente.").nextLine();
+        String cpf = capturarDados("Digite o CPF do cliente.").nextLine();
+        String telefone = capturarDados("Digite o telefone do cliente.").nextLine();
+        Cliente cliente = new Cliente(nome,cpf,telefone);
+        System.out.println("Cliente cadastrado com sucesso!");
+        return cliente;
+    }
 
 }
