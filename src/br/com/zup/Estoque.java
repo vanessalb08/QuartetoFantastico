@@ -21,6 +21,9 @@ public class Estoque {
         listaDeLivros.add(novoLivro);
     }
 
+    public void consultaLivro(Livro consulta) {
+        String verificar = consulta.getCodigoISBN();
+    }
 
     public void retirarLivro(Livro retiraLivro) {
         listaDeLivros.remove(retiraLivro);
