@@ -1,31 +1,20 @@
 package br.com.zup;
-
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Queue;
-
 public class Estoque {
-
-    private List listaDeLivros;
     private Cliente cliente;
     private Funcionario funcionario;
     private int quantidadeDelivros;
+    private List<Livro> listaDeLivros = new ArrayList<>();
+   // private Livro livroEstoque;
 
     public Estoque() {
     }
 
-    public Estoque(List listaDeLivros, Cliente cliente, Funcionario funcionario, int quantidadeDelivros) {
-        this.listaDeLivros = listaDeLivros;
+    public Estoque(Cliente cliente, Funcionario funcionario, int quantidadeDelivros) {
         this.cliente = cliente;
         this.funcionario = funcionario;
         this.quantidadeDelivros = quantidadeDelivros;
-    }
-
-    public List getListaDeLivros() {
-        return listaDeLivros;
-    }
-
-    public void setListaDeLivros(List listaDeLivros) {
-        this.listaDeLivros = listaDeLivros;
     }
 
     public Cliente getCliente() {
@@ -51,15 +40,18 @@ public class Estoque {
     public void setQuantidadeDelivros(int quantidadeDelivros) {
         this.quantidadeDelivros = quantidadeDelivros;
     }
-
+    public List<Livro> getLivroslista() {
+        return listaDeLivros;
+    }
     public void cadastrarLivro(Livro novolivro) {
         listaDeLivros.add(novolivro);
     }
 
+
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\nLista de livros: " + listaDeLivros);
         retorno.append("\nCliente" + cliente);
         retorno.append("\nFuncionário" + funcionario);
         retorno.append("\nQuantidade de Livros" + quantidadeDelivros);
