@@ -69,11 +69,11 @@ public class Livro {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Código ISBN: " + codigoISBN);
-        retorno.append("\nNome do Livro: " + nomeLivro);
-        retorno.append("\nAutor do Livro: "+autor);
-        retorno.append("\nEditora: "+editora);
-        retorno.append("\nPreço do livro: "+precoLivro);
+        retorno.append("Código ISBN: \t" + codigoISBN);
+        retorno.append("\nNome do Livro: \t" + nomeLivro);
+        retorno.append("\nAutor do Livro: \t"+autor);
+        retorno.append("\nEditora: \t"+editora);
+        retorno.append("\nPreço do livro: \t"+precoLivro);
         return retorno.toString();
     }
 }
