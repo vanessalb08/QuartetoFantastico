@@ -56,7 +56,7 @@ public class Livro {
         this.editora = editora;
     }
 
-        public double getPrecoLivro() {
+    public double getPrecoLivro() {
         return precoLivro;
     }
 
@@ -70,10 +70,10 @@ public class Livro {
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         retorno.append("Código ISBN: " + codigoISBN);
-        retorno.append("Nome do Livro: " + nomeLivro);
-        retorno.append("Autor do Livro: "+autor);
-        retorno.append("Editora: "+editora);
-        retorno.append("Preço do livro: "+precoLivro);
+        retorno.append("\nNome do Livro: " + nomeLivro);
+        retorno.append("\nAutor do Livro: "+autor);
+        retorno.append("\nEditora: "+editora);
+        retorno.append("\nPreço do livro: "+precoLivro);
         return retorno.toString();
     }
 }
