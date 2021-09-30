@@ -10,12 +10,28 @@ public class Sistema {
     }
 
     public static void menu() {
-        System.out.println("*** Bem vindo à livraria Cara de Livro ***");
-        System.out.println("TOP STOKE SYSTEM");
-        System.out.println("Digite 1 para cadastrar um livro ao estoque.");
-        System.out.println("Digite 2 para vender um livro.");
-        System.out.println("Digite 3 para verificar um livro no estoque.");
-        System.out.println("Digite 4 para sair do sistema.");
+        System.out.println("\n*** Bem vindo à livraria Cara de Livro ***");
+        System.out.println("\t\tTOP STOKE SYSTEM");
+        System.out.println("Digite [1] para cadastrar um livro ao estoque.");
+        System.out.println("Digite [2] para vender um livro.");
+        System.out.println("Digite [3] para verificar um livro no estoque.");
+        System.out.println("Digite [4] para sair do sistema.");
     }
+    public static Livro cadastrarLivros(){
+        //codigoISBN , nomeLivro, autor, editora, precoLivro
+        System.out.println("=================================================================");
+        String codigoISBN = capturarDados("Digite o Código do livro(ISBN): ").nextLine();
+        String nomeDoLivro = capturarDados("Digite o Nome do livro: ").nextLine();
+        String autor = capturarDados("Digite o autor do livro: ").nextLine();
+        String editora = capturarDados("Digite a editora do livro: ").nextLine();
+        double precoLivro = capturarDados("Digite o preço do livro").nextDouble();
+        Livro livrocadastrado = new Livro(codigoISBN,nomeDoLivro,autor,editora,precoLivro);
+        System.out.println("====================================================================");
+        System.out.println("Já tiramos o livro no deposito!!!");
+        System.out.println("=====================================================================");
+        System.out.println(livrocadastrado);
+        return livrocadastrado;
+    }
+
 
 }
