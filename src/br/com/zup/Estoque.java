@@ -52,6 +52,10 @@ public class Estoque {
         this.quantidadeDelivros = quantidadeDelivros;
     }
 
+    public void cadastrarLivro(Livro novolivro) {
+        listaDeLivros.add(novolivro);
+    }
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
