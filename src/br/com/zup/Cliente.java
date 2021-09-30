@@ -24,7 +24,7 @@ public class Cliente extends Pessoa{
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         retorno.append(super.toString());
-        retorno.append("\nNúmero de Telefone do Cliente: " + telefone);
+        retorno.append("\nNúmero de Telefone do Cliente: \t" + telefone);
         return retorno.toString();
     }
 }
