@@ -7,6 +7,14 @@ public class Venda {
 
     }
 
+    public Livro getLivro() {
+        return livro;
+    }
+
+    public void setLivro(Livro livro) {
+        this.livro = livro;
+    }
+
     //Métodos
     //Acréscimo de 10% na compra a prazo
     public double venderAPrazo (){
