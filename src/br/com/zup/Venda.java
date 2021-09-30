@@ -24,6 +24,10 @@ public class Venda {
         livro.setPrecoLivro(novoValor);
         return novoValor;
     }
-
+    public double venderAVista(){
+        double novoValor = livro.getPrecoLivro();
+        livro.setPrecoLivro(novoValor);
+        return novoValor;
+    }
 
 }
