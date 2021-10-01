@@ -109,15 +109,17 @@ public class Sistema {
             } else if (opcaoDesejada == 2) {
                 caraDeLivro.cadastrarCliente(cadastrarCliente());
                 caraDeLivro.cadastrarFucnionario(cadastrarFuncionario());
+                String pegarISBN = capturarDados("Digite o código ISBN do livro desejado").nextLine();
                 System.out.println("[1] tipo de Venda a prazo 10% acréscimo");
                 System.out.println("[2] tipo de Venda a vista 5% desconto");
+
                 int tipoDeVenda = capturarDados("Indique o tipo de venda: ").nextInt();
-//
-//                if (tipoDeVenda == 1) {
-//                    caraDeLivro.setVendaAtual(realizarVendaAPrazo());
-//                } else if (tipoDeVenda == 2) {
-//                    caraDeLivro.setVendaAtual(realizarVendaAVista());
-//                }
+
+                if (tipoDeVenda == 1) {
+                    topStoke.
+                } else if (tipoDeVenda == 2) {
+                    caraDeLivro.setVendaAtual(realizarVendaAVista());
+                }
 
             } else if (opcaoDesejada == 3) {
                 System.out.println("\n====================================================");
