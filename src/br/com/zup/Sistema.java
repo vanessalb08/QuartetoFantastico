@@ -50,6 +50,16 @@ public class Sistema {
         System.out.println("=================================================================");
         return cliente;
     }
+    public static Venda realizarVendaAVista(Livro livro){
+        Venda novaVenda = new Venda();
+        novaVenda.venderAVista(livro);
+        return novaVenda;
+    }
+    public static Venda realizarVendaAPrazo(Livro livro){
+        Venda novaVenda = new Venda();
+        novaVenda.venderAPrazo(livro);
+        return novaVenda;
+    }
 
     //Cadastrar funcionário responsável pela venda
     public static Funcionario cadastrarFuncionario(){
@@ -77,9 +87,4 @@ public class Sistema {
             }
          return livrosL;
     }
-
-
-
-
-
 }
