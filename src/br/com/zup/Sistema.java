@@ -42,4 +42,18 @@ public class Sistema {
         return cliente;
     }
 
+    //Cadastrar funcionário responsável pela venda
+    public static Funcionario cadastrarFuncionario(){
+        System.out.println("------------------------------------------");
+        String nomeFuncionario = capturarDados("Digite o nome do funcionário que realizou a venda:").nextLine();
+        String cpfFuncionario = capturarDados("Digite o cpf do funcionário:").nextLine();
+        String telefoneFuncionario = capturarDados("Digite o telefone do cpf").nextLine();
+
+        Funcionario funcionario = new Funcionario(nomeFuncionario,cpfFuncionario,telefoneFuncionario);
+        System.out.println("Funcionário cadastrado");
+        System.out.println(funcionario);
+        return funcionario;
+    }
+
+
 }
