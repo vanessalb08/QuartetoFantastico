@@ -97,12 +97,24 @@ public class Sistema {
 
     public static void executar() {
         boolean menu = true;
+        Livraria caraDeLivro = new Livraria();
+        Estoque topStoke = new Estoque();
 
         while (menu) {
             menu();
+            int opcaoDesejada = capturarDados("Digite a opção que deseja: ").nextInt();
+            if (opcaoDesejada == 1){
+                criarEstoque();
 
+            }
         }
 
     }
 
 }
+/*
+System.out.println("Digite [1] para cadastrar um livro ao estoque.");
+        System.out.println("Digite [2] para vender um livro.");
+        System.out.println("Digite [3] para verificar um livro no estoque.");
+        System.out.println("Digite [4] para sair do sistema.");
+ */
