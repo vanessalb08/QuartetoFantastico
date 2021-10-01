@@ -107,7 +107,19 @@ public class Sistema {
                 topStoke.add(estoque);
 
             }else if (opcaoDesejada==2){
+                caraDeLivro.cadastrarCliente(cadastrarCliente());
+                caraDeLivro.cadastrarFucnionario(cadastrarFuncionario());
+                System.out.println("[1] tipo de Venda a prazo 10% acréscimo");
+                System.out.println("[2] tipo de Venda a vista 5% desconto");
+                int tipoDeVenda = capturarDados("Indique o tipo de venda: ").nextInt();
 
+                if (tipoDeVenda ==1) {
+                    caraDeLivro.setVendaAtual(realizarVendaAPrazo());
+                }
+                else if (tipoDeVenda ==2) {
+                    caraDeLivro.setVendaAtual(realizarVendaAVista());
+                }
+               caraDeLivro.e
 
             }
             else if (opcaoDesejada==3){
@@ -131,6 +143,6 @@ public class Sistema {
 }
 /*
         System.out.println("Digite [2] para vender um livro.");
-        System.out.println("Digite [3] para verificar um livro no estoque.");
+
 
  */
