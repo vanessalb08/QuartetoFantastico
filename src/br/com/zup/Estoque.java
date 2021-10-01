@@ -33,6 +33,18 @@ public class Estoque {
         listaDeLivros.remove(retiraLivro);
     }
 
+    public void removerLivro(String excluirISBN) {
+        Livro removerLivro = null;
+
+        for (Livro referencia : listaDeLivros) {
+            if (referencia.getCodigoISBN().equals(excluirISBN)) {
+                removerLivro = referencia;
+            }
+        }
+
+        listaDeLivros.remove(removerLivro);
+    }
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();

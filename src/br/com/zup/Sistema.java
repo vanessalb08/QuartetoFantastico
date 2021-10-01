@@ -89,7 +89,7 @@ public class Sistema {
         return livrosL;
     }
 
-    public static Estoque criarEstoque(){
+    public static Estoque criarEstoque() {
         Estoque estoque = new Estoque(livrosNaLista());
         return estoque;
     }
@@ -97,43 +97,38 @@ public class Sistema {
     public static void executar() {
         boolean menu = true;
         Livraria caraDeLivro = new Livraria();
-        List <Estoque> topStoke = new ArrayList<>();
+        List<Estoque> topStoke = new ArrayList<>();
 
         while (menu) {
             menu();
             int opcaoDesejada = capturarDados("Digite a opção que deseja: ").nextInt();
-            if (opcaoDesejada == 1){
+            if (opcaoDesejada == 1) {
                 Estoque estoque = criarEstoque();
                 topStoke.add(estoque);
 
-            }else if (opcaoDesejada==2){
+            } else if (opcaoDesejada == 2) {
                 caraDeLivro.cadastrarCliente(cadastrarCliente());
                 caraDeLivro.cadastrarFucnionario(cadastrarFuncionario());
                 System.out.println("[1] tipo de Venda a prazo 10% acréscimo");
                 System.out.println("[2] tipo de Venda a vista 5% desconto");
                 int tipoDeVenda = capturarDados("Indique o tipo de venda: ").nextInt();
+//
+//                if (tipoDeVenda == 1) {
+//                    caraDeLivro.setVendaAtual(realizarVendaAPrazo());
+//                } else if (tipoDeVenda == 2) {
+//                    caraDeLivro.setVendaAtual(realizarVendaAVista());
+//                }
 
-                if (tipoDeVenda ==1) {
-                    caraDeLivro.setVendaAtual(realizarVendaAPrazo());
-                }
-                else if (tipoDeVenda ==2) {
-                    caraDeLivro.setVendaAtual(realizarVendaAVista());
-                }
-               caraDeLivro.e
-
-            }
-            else if (opcaoDesejada==3){
+            } else if (opcaoDesejada == 3) {
                 System.out.println("\n====================================================");
                 System.out.println("==============CATÁLOGO DE LIVROS====================");
                 System.out.println(topStoke);
                 System.out.println("\n====================================================");
 
-            }
-            else if (opcaoDesejada==4){
-                menu =false;
+            } else if (opcaoDesejada == 4) {
+                menu = false;
                 System.out.println("Obrigad@ por usar a Top Stoke System");
-            }
-            else {
+            } else {
                 System.out.println("Por favor, digite uma opção do menu: ");
             }
         }
@@ -141,8 +136,6 @@ public class Sistema {
     }
 
 }
-/*
-        System.out.println("Digite [2] para vender um livro.");
 
 
- */
+
