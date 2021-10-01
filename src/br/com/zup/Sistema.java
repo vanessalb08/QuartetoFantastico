@@ -31,7 +31,7 @@ public class Sistema {
         double precoLivro = capturarDados("Digite o preço do livro").nextDouble();
         Livro livrocadastrado = new Livro(codigoISBN, nomeDoLivro, autor, editora, precoLivro);
         System.out.println("====================================================================");
-        System.out.println("\t Já tiramos o livro no deposito!!!");
+        System.out.println("\t Livro Cadastrado ao Estoque!!!");
         System.out.println("=====================================================================");
         System.out.println(livrocadastrado);
 
@@ -90,14 +90,31 @@ public class Sistema {
         return livrosL;
     }
 
+    public static Estoque criarEstoque(){
+        Estoque estoque = new Estoque(livrosNaLista());
+        return estoque;
+    }
+
     public static void executar() {
         boolean menu = true;
         Livraria caraDeLivro = new Livraria();
+        Estoque topStoke = new Estoque();
 
         while (menu) {
             menu();
+            int opcaoDesejada = capturarDados("Digite a opção que deseja: ").nextInt();
+            if (opcaoDesejada == 1){
+                criarEstoque();
+
+            }
         }
 
     }
 
 }
+/*
+System.out.println("Digite [1] para cadastrar um livro ao estoque.");
+        System.out.println("Digite [2] para vender um livro.");
+        System.out.println("Digite [3] para verificar um livro no estoque.");
+        System.out.println("Digite [4] para sair do sistema.");
+ */

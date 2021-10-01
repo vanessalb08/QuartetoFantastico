@@ -13,6 +13,10 @@ public class Estoque {
 
     }
 
+    public Estoque(List<Livro> listaDeLivros) {
+        this.listaDeLivros = listaDeLivros;
+    }
+
     public List<Livro> getLivroslista() {
         return listaDeLivros;
     }
