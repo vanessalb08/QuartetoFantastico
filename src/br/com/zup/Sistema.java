@@ -106,6 +106,18 @@ public class Sistema {
             if (opcaoDesejada == 1){
                 criarEstoque();
 
+            }else if (opcaoDesejada==2){
+
+            }
+            else if (opcaoDesejada==3){
+
+            }
+            else if (opcaoDesejada==4){
+                menu =false;
+                System.out.println("Obrigada por usar a Top Stoke System");
+            }
+            else {
+                System.out.println("Por favor, digite uma opção do menu: ");
             }
         }
 
