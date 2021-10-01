@@ -39,36 +39,38 @@ public class Sistema {
     }
 
     //Cadastrar Cliente pela venda
-    public static Cliente cadastrarCliente(){
+    public static Cliente cadastrarCliente() {
         System.out.println("=================================================================");
         String nome = capturarDados("Digite o nome do cliente.").nextLine();
         String cpf = capturarDados("Digite o CPF do cliente.").nextLine();
         String telefone = capturarDados("Digite o telefone do cliente.").nextLine();
-        Cliente cliente = new Cliente(nome,cpf,telefone);
+        Cliente cliente = new Cliente(nome, cpf, telefone);
         System.out.println("=================================================================");
         System.out.println("\t\tCliente cadastrado com sucesso!");
         System.out.println("=================================================================");
         return cliente;
     }
-    public static Venda realizarVendaAVista(Livro livro){
+
+    public static Venda realizarVendaAVista(Livro livro) {
         Venda novaVenda = new Venda();
         novaVenda.venderAVista(livro);
         return novaVenda;
     }
-    public static Venda realizarVendaAPrazo(Livro livro){
+
+    public static Venda realizarVendaAPrazo(Livro livro) {
         Venda novaVenda = new Venda();
         novaVenda.venderAPrazo(livro);
         return novaVenda;
     }
 
     //Cadastrar funcionário responsável pela venda
-    public static Funcionario cadastrarFuncionario(){
+    public static Funcionario cadastrarFuncionario() {
         System.out.println("=================================================================");
         String nomeFuncionario = capturarDados("Digite o nome do funcionário que realizou a venda:").nextLine();
         String cpfFuncionario = capturarDados("Digite o cpf do funcionário:").nextLine();
         String telefoneFuncionario = capturarDados("Digite o telefone do cpf").nextLine();
 
-        Funcionario funcionario = new Funcionario(nomeFuncionario,cpfFuncionario,telefoneFuncionario);
+        Funcionario funcionario = new Funcionario(nomeFuncionario, cpfFuncionario, telefoneFuncionario);
         System.out.println("=================================================================");
         System.out.println("\t\tFuncionário cadastrado");
         System.out.println("=================================================================");
@@ -80,11 +82,22 @@ public class Sistema {
     public static List livrosNaLista() {
         List<Livro> livrosL = new ArrayList<>();
         System.out.println("*******************************************************");
-            int numLivros = capturarDados("Digite o número de livros a cadastrar").nextInt();
-            for(int i = 0;i<numLivros;i++) {
-                livrosL.add(cadastrarLivros());
+        int numLivros = capturarDados("Digite o número de livros a cadastrar").nextInt();
+        for (int i = 0; i < numLivros; i++) {
+            livrosL.add(cadastrarLivros());
 
-            }
-         return livrosL;
+        }
+        return livrosL;
     }
+
+    public static void executar() {
+        boolean menu = true;
+        Livraria caraDeLivro = new Livraria();
+
+        while (menu) {
+            menu();
+        }
+
+    }
+
 }
