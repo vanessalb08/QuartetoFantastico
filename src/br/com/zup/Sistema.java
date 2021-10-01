@@ -16,7 +16,7 @@ public class Sistema {
         System.out.println("\t\tTOP STOKE SYSTEM");
         System.out.println("Digite [1] para cadastrar um livro ao estoque.");
         System.out.println("Digite [2] para vender um livro.");
-        System.out.println("Digite [3] para verificar um livro no estoque.");
+        System.out.println("Digite [3] para exibir catálogo de livros");
         System.out.println("Digite [4] para sair do sistema.");
     }
 
@@ -33,7 +33,6 @@ public class Sistema {
         System.out.println("====================================================================");
         System.out.println("\t Livro Cadastrado ao Estoque!!!");
         System.out.println("=====================================================================");
-        System.out.println(livrocadastrado);
 
         return livrocadastrado;
     }
@@ -98,23 +97,29 @@ public class Sistema {
     public static void executar() {
         boolean menu = true;
         Livraria caraDeLivro = new Livraria();
-        Estoque topStoke = new Estoque();
+        List <Estoque> topStoke = new ArrayList<>();
 
         while (menu) {
             menu();
             int opcaoDesejada = capturarDados("Digite a opção que deseja: ").nextInt();
             if (opcaoDesejada == 1){
-                criarEstoque();
+                Estoque estoque = criarEstoque();
+                topStoke.add(estoque);
 
             }else if (opcaoDesejada==2){
 
+
             }
             else if (opcaoDesejada==3){
+                System.out.println("\n====================================================");
+                System.out.println("==============CATÁLOGO DE LIVROS====================");
+                System.out.println(topStoke);
+                System.out.println("\n====================================================");
 
             }
             else if (opcaoDesejada==4){
                 menu =false;
-                System.out.println("Obrigada por usar a Top Stoke System");
+                System.out.println("Obrigad@ por usar a Top Stoke System");
             }
             else {
                 System.out.println("Por favor, digite uma opção do menu: ");
@@ -125,8 +130,7 @@ public class Sistema {
 
 }
 /*
-System.out.println("Digite [1] para cadastrar um livro ao estoque.");
         System.out.println("Digite [2] para vender um livro.");
         System.out.println("Digite [3] para verificar um livro no estoque.");
-        System.out.println("Digite [4] para sair do sistema.");
+
  */
